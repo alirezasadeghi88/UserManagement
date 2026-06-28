@@ -27,4 +27,9 @@ public class RoleController {
     public List<Role> roleList() {
         return repository.findAll();
     }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
 }
