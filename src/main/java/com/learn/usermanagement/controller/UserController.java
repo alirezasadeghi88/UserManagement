@@ -32,4 +32,9 @@ public class UserController {
     public void delete(@PathVariable Long id) {
         userRepository.deleteById(id);
     }
+
+    @PutMapping("/{id}")
+    public User update(@PathVariable Long id, @RequestBody User user) {
+        return service.update(id, user);
+    }
 }
