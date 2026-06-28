@@ -18,5 +18,10 @@ public class UserService {
     public User update(Long id, User newData) {
         Optional<User> userOpt = userRepository.findById(id);
         User user = userOpt.get();
+
+        if (newData.getFirstname() != null && newData.getFirstname().isEmpty()
+            && newData.getFirstname().equals("")) {
+            user.setFirstname(newData.getFirstname());
+        }
     }
 }
