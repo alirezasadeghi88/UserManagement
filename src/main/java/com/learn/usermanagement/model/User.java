@@ -23,4 +23,7 @@ public class User {
 
     @Column(unique = true,updatable = false)
     private String employeeId;
+
+    @Column(unique = true, updatable = false)
+    private String username;
 }
