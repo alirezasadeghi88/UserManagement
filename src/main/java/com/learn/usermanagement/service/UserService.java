@@ -15,5 +15,8 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-
+    public User update(Long id, User newData) {
+        Optional<User> userOpt = userRepository.findById(id);
+        User user = userOpt.get();
+    }
 }
