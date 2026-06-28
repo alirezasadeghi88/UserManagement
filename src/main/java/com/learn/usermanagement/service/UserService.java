@@ -43,5 +43,11 @@ public class UserService {
                 && newData.getPassword().equals("")) {
             user.setPassword(newData.getPassword());
         }
+
+        if (newData.getRole() != null) {
+            newData.setRole(newData.getRole());
+        }
+
+        return userRepository.save(user);
     }
 }
