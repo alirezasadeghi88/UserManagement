@@ -20,4 +20,7 @@ public class User {
 
     @Column(nullable = false)
     private String lastname;
+
+    @Column(unique = true,updatable = false)
+    private String employeeId;
 }
