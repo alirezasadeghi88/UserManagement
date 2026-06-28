@@ -38,5 +38,10 @@ public class UserService {
                 && newData.getUsername().equals("")) {
             user.setUsername(newData.getUsername());
         }
+
+        if (newData.getPassword() != null && newData.getPassword().isEmpty()
+                && newData.getPassword().equals("")) {
+            user.setPassword(newData.getPassword());
+        }
     }
 }
