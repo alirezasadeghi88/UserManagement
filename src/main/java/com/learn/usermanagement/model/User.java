@@ -26,4 +26,7 @@ public class User {
 
     @Column(unique = true, updatable = false)
     private String username;
+
+    @Column(updatable = false)
+    private String password;
 }
