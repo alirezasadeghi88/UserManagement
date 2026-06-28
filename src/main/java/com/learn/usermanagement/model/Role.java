@@ -14,4 +14,7 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column(updatable = true, unique = false)
+    private String name;
 }
