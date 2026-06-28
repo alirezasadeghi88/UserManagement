@@ -23,5 +23,10 @@ public class UserService {
             && newData.getFirstname().equals("")) {
             user.setFirstname(newData.getFirstname());
         }
+
+        if (newData.getLastname() != null && newData.getLastname().isEmpty()
+            && newData.getLastname().equals("")) {
+            user.setFirstname(newData.getFirstname());
+        }
     }
 }
