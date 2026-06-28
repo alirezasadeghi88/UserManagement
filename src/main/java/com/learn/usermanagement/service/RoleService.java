@@ -20,6 +20,15 @@ public class RoleService {
         Role role = roleOpt.get();
 
 
+        if (newData.getName() != null && !newData.getName().isEmpty() && !newData.getName().equals("")) {
+            role.setName(newData.getName());
+        }
 
+        if (newData.getUsers() != null) {
+            role.getUsers().clear();
+            role.getUsers().addAll(newData.getUsers());
+        }
+
+        return repository.save(role);
     }
 }
